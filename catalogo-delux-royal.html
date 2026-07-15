@@ -1,0 +1,2300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delux & Royal | Catálogo Exclusivo</title>
+    <meta name="description" content="Delux Puff & Royal Essence: perfumería 1:1 y vapes de alta gama en Bucaramanga, Colombia. Catálogo exclusivo con atención personalizada.">
+    <meta name="theme-color" content="#050607">
+    <meta property="og:title" content="Delux & Royal | Catálogo Exclusivo">
+    <meta property="og:description" content="Perfumería 1:1 y vapes de alta gama, con la exclusividad y calidad que tu experiencia merece.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon de marca (corona dorada sobre fondo oscuro), sin depender de archivos externos -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23050607'/%3E%3Cpath d='M14 42 L10 22 L24 32 L32 16 L40 32 L54 22 L50 42 Z' fill='%23cba135'/%3E%3C/svg%3E">
+
+    <!-- Tipografías Premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* 1. CONFIGURACIÓN GENERAL Y FONDO */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --gold: #cba135;
+            --gold-soft: #e8d38a;
+            --emerald: #107c41;
+            --emerald-bright: #22c55e;
+            --ink: #050607;
+        }
+
+        ::selection {
+            background: rgba(203, 161, 53, 0.25);
+            color: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: radial-gradient(circle at 50% 25%, #181b1d 0%, #0d0f11 50%, #050607 100%);
+            background-attachment: fixed;
+            color: #f1f5f9;
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            mix-blend-mode: overlay;
+        }
+
+        /* 2. VENTANA EMERGENTE: ADVERTENCIA DE SALUD */
+        .age-gate {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 6, 7, 0.98);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .age-gate-content {
+            background: rgba(10, 6, 6, 0.6);
+            border: 1px solid rgba(255, 74, 74, 0.25);
+            border-top: 3px solid #ff4a4a;
+            padding: 48px 34px;
+            border-radius: 20px;
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 60px rgba(255, 74, 74, 0.08);
+        }
+
+        .badge-18 {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 24px;
+            border: 4px solid #ff4a4a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 2.3rem;
+            color: #ff4a4a;
+            position: relative;
+            animation: badgePulse 1.8s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { box-shadow: 0 0 15px rgba(255, 74, 74, 0.25); }
+            50% { box-shadow: 0 0 35px rgba(255, 74, 74, 0.55); }
+        }
+
+        .badge-18::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: #ff4a4a;
+            transform: rotate(-45deg);
+        }
+
+        .age-gate h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .age-gate p {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .health-warning {
+            background: rgba(255, 74, 74, 0.08);
+            border: 1px solid rgba(255, 74, 74, 0.3);
+            padding: 16px 18px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            color: #ffb3b3;
+            font-weight: 600;
+            margin-bottom: 28px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.5;
+        }
+
+        .age-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .age-btn {
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .btn-yes {
+            background: rgba(16, 124, 65, 0.2);
+            border: 1px solid #107c41;
+            color: #ffffff;
+        }
+
+        .btn-yes:hover {
+            background: #107c41;
+            box-shadow: 0 0 15px rgba(16, 124, 65, 0.4);
+        }
+
+        .btn-no {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+        }
+
+        .btn-no:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        /* 2B. PANTALLA DE BIENVENIDA (HERO) */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-welcome {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 40px 20px;
+            text-align: center;
+            /* Fondo propio e independiente del <body>: así la bienvenida
+               siempre se ve nítida, aunque el body cambie a modo claro
+               al entrar en Royal Essence. */
+            background: radial-gradient(circle at 50% 25%, #181b1d 0%, #0d0f11 50%, #050607 100%);
+            isolation: isolate;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 600px;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle, rgba(203, 161, 53, 0.08) 0%, rgba(16, 124, 65, 0.04) 45%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 560px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-logo {
+            width: 150px;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: 28px;
+            filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.5));
+        }
+
+        .hero-divider {
+            width: 50px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin-bottom: 22px;
+        }
+
+        .hero-location {
+            font-size: 0.75rem;
+            color: var(--gold-soft);
+            text-transform: uppercase;
+            letter-spacing: 3.5px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 1.3;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .hero-subtitle {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 22px;
+            max-width: 420px;
+        }
+
+        .hero-trust {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.7rem;
+            color: var(--gold-soft);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            padding: 8px 18px;
+            border: 1px solid rgba(203, 161, 53, 0.3);
+            border-radius: 30px;
+            margin-bottom: 40px;
+        }
+
+        .hero-scroll-btn {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .hero-scroll-btn:hover {
+            color: var(--gold-soft);
+        }
+
+        .hero-scroll-btn svg {
+            stroke: currentColor;
+            animation: heroBounce 2s ease-in-out infinite;
+        }
+
+        @keyframes heroBounce {
+            0%, 100% { transform: translateY(0); opacity: 0.6; }
+            50% { transform: translateY(8px); opacity: 1; }
+        }
+
+        @media (min-width: 640px) {
+            .hero-title { font-size: 2.9rem; }
+        }
+
+        /* 3. BARRA DE NAVEGACIÓN Y LOGOS CONJUNTOS */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(5, 6, 7, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .navbar::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(203, 161, 53, 0.5) 50%, transparent 100%);
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .menu-toggle svg {
+            stroke: var(--gold);
+            transition: transform 0.3s ease;
+        }
+
+        /* Contenedor que agrupa ambos logos en la cabecera */
+        .brand-logos-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* "Slot" de altura fija para que ambos logos ocupen el mismo espacio visual */
+        .logo-slot {
+            height: 50px;
+            width: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .brand-logos-header img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-royal {
+            transform: scale(1.3);
+        }
+
+        .header-divider {
+            width: 1px;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Menú Lateral (Sidebar) */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -320px;
+            width: 320px;
+            height: 100%;
+            background: rgba(13, 15, 17, 0.98);
+            backdrop-filter: blur(20px);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 1000;
+            transition: left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            padding: 40px 30px;
+            box-shadow: 20px 0 40px rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+        }
+
+        .sidebar.open {
+            left: 0;
+        }
+
+        .sidebar-close {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+            float: right;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-close:hover {
+            color: #ffffff;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            clear: both;
+        }
+
+        .sidebar-item {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .sidebar-link {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: block;
+            cursor: pointer;
+        }
+
+        .sidebar-link:hover, .sidebar-link.active {
+            color: var(--gold-soft);
+            padding-left: 10px;
+            background: linear-gradient(90deg, rgba(203, 161, 53, 0.12) 0%, transparent 100%);
+            border-left: 2px solid var(--gold);
+        }
+
+        /* DESPLEGABLES DINÁMICOS EN SIDEBAR */
+        .sidebar-dropdown {
+            max-height: 0;
+            overflow: hidden;
+            list-style: none;
+            padding-left: 15px;
+            transition: max-height 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-left: 1px dashed rgba(255, 255, 255, 0.1);
+            margin-top: 5px;
+        }
+
+        /* Despliegue en Hover / Foco */
+        .sidebar-item-dropdown:hover .sidebar-dropdown,
+        .sidebar-item-dropdown.active .sidebar-dropdown {
+            max-height: 400px;
+        }
+
+        .sidebar-sub-item {
+            margin: 12px 0;
+            position: relative;
+        }
+
+        .sidebar-sub-link {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease, padding 0.3s ease;
+            display: block;
+            cursor: pointer;
+        }
+
+        .sidebar-sub-link:hover {
+            color: #ffffff;
+            padding-left: 5px;
+        }
+
+        /* Subdesplegable de Kits */
+        .sub-dropdown {
+            max-height: 0;
+            overflow: hidden;
+            list-style: none;
+            padding-left: 15px;
+            transition: max-height 0.3s ease;
+            border-left: 1px dotted rgba(255, 255, 255, 0.1);
+            margin-top: 5px;
+        }
+
+        .sub-dropdown-item:hover .sub-dropdown,
+        .sub-dropdown-item.active .sub-dropdown {
+            max-height: 150px;
+        }
+
+        .sidebar-nested-link {
+            color: #475569;
+            text-decoration: none;
+            font-size: 0.8rem;
+            display: block;
+            margin: 6px 0;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .sidebar-nested-link:hover {
+            color: var(--gold-soft);
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+            display: none;
+        }
+
+        .sidebar-overlay.show {
+            display: block;
+        }
+
+        /* 4. CABECERAS DINÁMICAS CON LOGO DE SECCIÓN */
+        .section-header {
+            max-width: 1200px;
+            margin: 50px auto 20px;
+            padding: 0 20px;
+            display: none;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .section-header.active {
+            display: flex;
+        }
+
+        .section-logo-img {
+            height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .section-kicker {
+            display: inline-block;
+            font-size: 0.68rem;
+            color: var(--gold-soft);
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .section-kicker::before {
+            content: '◆';
+            margin-right: 8px;
+            font-size: 0.6rem;
+            color: var(--gold);
+        }
+
+        .section-title-group h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            background: linear-gradient(120deg, #ffffff 40%, var(--gold-soft) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-title-group p {
+            font-size: 0.85rem;
+            color: #107c41;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* 5. CONTENEDORES Y GRILLA DE PRODUCTOS COHERENTES */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+            display: none;
+        }
+
+        .container.active {
+            display: block;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* 5B. BARRA DE FILTROS (ORDENAR POR PRECIO / MÁS VENDIDOS) */
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .filter-btn {
+            padding: 10px 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            color: #cbd5e1;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .filter-btn:hover {
+            border-color: rgba(203, 161, 53, 0.4);
+            color: #ffffff;
+        }
+
+        .filter-btn.active {
+            background: rgba(203, 161, 53, 0.12);
+            border-color: var(--gold);
+            color: var(--gold-soft);
+            box-shadow: 0 4px 14px rgba(203, 161, 53, 0.15);
+        }
+
+        .bestseller-tag {
+            display: inline-block;
+            background: rgba(203, 161, 53, 0.15);
+            border: 1px solid rgba(203, 161, 53, 0.4);
+            color: var(--gold-soft);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            width: fit-content;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(203, 161, 53, 0.35);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(203, 161, 53, 0.08);
+        }
+
+        .image-wrapper {
+            width: 100%;
+            padding-top: 110%;
+            position: relative;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.01) 0%, rgba(0,0,0,0.4) 100%);
+            overflow: hidden;
+            cursor: zoom-in;
+        }
+
+        .image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(5, 6, 7, 0.85);
+            border: 1px solid rgba(16, 124, 65, 0.4);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            color: #ffffff;
+            backdrop-filter: blur(5px);
+            z-index: 2;
+        }
+
+        .card-info {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-name {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .product-details {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-bottom: 16px;
+            flex-grow: 1;
+            font-weight: 300;
+        }
+
+        .product-price-row {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding-top: 14px;
+            margin-bottom: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .product-price-label {
+            font-size: 0.68rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .product-price-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--gold-soft);
+            letter-spacing: 0.5px;
+        }
+
+        .btn-catalog {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            letter-spacing: 0.8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-catalog:hover {
+            background: rgba(16, 124, 65, 0.15);
+            border-color: #107c41;
+            box-shadow: 0 6px 18px rgba(16, 124, 65, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .btn-catalog::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent 0%, rgba(203, 161, 53, 0.18) 50%, transparent 100%);
+            transition: left 0.6s ease;
+        }
+
+        .btn-catalog:hover::after {
+            left: 130%;
+        }
+
+        .img-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #111315;
+            color: #4a5568;
+            font-size: 0.75rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* 5B. TEMA "ROYAL ESSENCE" — LUJO MINIMALISTA EN BLANCO */
+        body.royal-mode {
+            background: #faf8f4;
+        }
+
+        body.royal-mode::before {
+            opacity: 0.015;
+        }
+
+        body.royal-mode .navbar::after {
+            background: linear-gradient(90deg, transparent 0%, rgba(138, 109, 63, 0.55) 50%, transparent 100%);
+        }
+
+        body.royal-mode #header-section {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            padding-bottom: 34px;
+        }
+
+        body.royal-mode .section-kicker,
+        body.royal-mode .section-kicker::before {
+            color: #8a6d3f;
+        }
+
+        body.royal-mode .section-title-group h1 {
+            background: none;
+            -webkit-text-fill-color: initial;
+            color: #111111;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        body.royal-mode .section-title-group p {
+            color: #8a6d3f;
+            font-weight: 500;
+        }
+
+        /* Tarjetas de Royal Essence: fondo blanco, líneas finas, un acento por marca */
+        #container-perfumes .card {
+            background: #ffffff;
+            border: 1px solid #e8e2d6;
+            border-top: 3px solid var(--brand-accent, #8a6d3f);
+            border-radius: 3px;
+            box-shadow: 0 10px 25px rgba(20, 15, 5, 0.06);
+        }
+
+        #container-perfumes .card:hover {
+            transform: translateY(-4px);
+            border-color: #e8e2d6;
+            border-top-color: var(--brand-accent, #8a6d3f);
+            box-shadow: 0 22px 45px rgba(20, 15, 5, 0.1);
+        }
+
+        #container-perfumes .image-wrapper {
+            background: #f4f1e9;
+        }
+
+        #container-perfumes .img-placeholder {
+            background: #f4f1e9;
+            color: #a3a3a3;
+        }
+
+        #container-perfumes .badge {
+            background: #111111;
+            border: 1px solid #111111;
+            color: #ffffff;
+            border-radius: 2px;
+            backdrop-filter: none;
+        }
+
+        #container-perfumes .card-info {
+            padding: 26px 24px;
+        }
+
+        #container-perfumes .brand-kicker {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.7rem;
+            letter-spacing: 2.2px;
+            text-transform: uppercase;
+            color: var(--brand-accent, #8a6d3f);
+            margin-bottom: 6px;
+        }
+
+        #container-perfumes .product-name {
+            font-family: 'Playfair Display', serif;
+            color: #111111;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        #container-perfumes .product-details {
+            color: #6b6b6b;
+        }
+
+        #container-perfumes .product-price-row {
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        #container-perfumes .product-price-label {
+            color: #8a8a8a;
+        }
+
+        #container-perfumes .product-price-value {
+            font-family: 'Playfair Display', serif;
+            color: #111111;
+        }
+
+        #container-perfumes .btn-catalog {
+            background: #111111;
+            border: 1px solid #111111;
+            color: #ffffff;
+            letter-spacing: 1.5px;
+        }
+
+        #container-perfumes .btn-catalog::after {
+            display: none;
+        }
+
+        #container-perfumes .btn-catalog:hover {
+            background: #ffffff;
+            color: #111111;
+            border-color: #111111;
+            box-shadow: none;
+            transform: none;
+        }
+
+        /* 6. APARTADO DE COMBOS */
+        .combo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .combo-card {
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-top: 2px solid var(--gold);
+            border-radius: 16px;
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .combo-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(16, 124, 65, 0.35);
+            box-shadow: 0 20px 45px rgba(16, 124, 65, 0.15);
+        }
+
+        .combo-img-container {
+            width: 100%;
+            padding-top: 110%;
+            position: relative;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.01) 0%, rgba(0,0,0,0.4) 100%);
+            overflow: hidden;
+            cursor: zoom-in;
+        }
+
+        .combo-img-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .combo-card:hover .combo-img-container img {
+            transform: scale(1.05);
+        }
+
+        .combo-info-tag {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            background: rgba(5, 6, 7, 0.9);
+            border: 1px solid rgba(255,255,255,0.08);
+            color: #94a3b8;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.72rem;
+            letter-spacing: 0.5px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            z-index: 2;
+        }
+
+        .combo-info-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .combo-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .combo-desc {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-bottom: 16px;
+            flex-grow: 1;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        .combo-meta {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding-top: 14px;
+            margin-bottom: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .combo-label {
+            font-size: 0.68rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .combo-price-val {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .combo-promo-badge {
+            width: 100%;
+            background: rgba(16, 124, 65, 0.08);
+            border: 1px solid rgba(16, 124, 65, 0.3);
+            color: #22c55e;
+            text-align: center;
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .combo-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid #107c41;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+        }
+
+        .combo-btn:hover {
+            background: rgba(16, 124, 65, 0.15);
+            box-shadow: 0 6px 18px rgba(16, 124, 65, 0.25);
+            transform: translateY(-1px);
+        }
+
+        /* 7. TABLA DE PROMOCIONES */
+        .promo-container {
+            background: #090a0c;
+            border: 1px solid rgba(16, 124, 65, 0.15);
+            border-top: 2px solid var(--gold);
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
+
+        .promo-subtitle {
+            color: #22c55e;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .promo-title-table {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 15px;
+        }
+
+        .promo-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .promo-table th {
+            text-align: left;
+            padding: 12px 10px;
+            font-size: 0.72rem;
+            color: #475569;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .promo-table td {
+            padding: 14px 10px;
+            font-size: 0.85rem;
+            color: #f1f5f9;
+            border-bottom: 1px solid rgba(255,255,255,0.02);
+        }
+
+        .promo-table tr:hover td {
+            background: rgba(255,255,255,0.01);
+        }
+
+        .promo-price-strike {
+            text-decoration: line-through;
+            color: #64748b;
+        }
+
+        .promo-price-active {
+            color: #22c55e;
+            font-weight: 600;
+        }
+
+        .promo-btn-order {
+            display: block;
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+            background: #107c41;
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(16, 124, 65, 0.25);
+        }
+
+        .promo-btn-order:hover {
+            background: #0f6c38;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(16, 124, 65, 0.35);
+        }
+
+        /* 8. VENTANA FLOTANTE (LIGHTBOX) PARA IMÁGENES COMPLETAS */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 6, 7, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .lightbox.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 85%;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            object-fit: contain;
+        }
+
+        .lightbox.show .lightbox-content {
+            transform: scale(1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.05);
+        }
+
+        /* 9. BURBUJA FLOTANTE WHATSAPP ESTILO "LIQUID EMERALD" */
+        /* 9B. BOTÓN "VOLVER ARRIBA" */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 999;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: rgba(13, 15, 17, 0.85);
+            border: 1px solid rgba(203, 161, 53, 0.3);
+            color: var(--gold-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.3s ease, visibility 0.3s;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            border-color: var(--gold);
+            color: #ffffff;
+        }
+
+        body.royal-mode .back-to-top {
+            background: rgba(255, 255, 255, 0.92);
+            border-color: #e8e2d6;
+            color: #8a6d3f;
+        }
+
+        body.royal-mode .back-to-top:hover {
+            border-color: #8a6d3f;
+            color: #111111;
+        }
+
+        .wa-wrapper {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .wa-bubble {
+            background: rgba(16, 124, 65, 0.9);
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            box-shadow: 0 8px 32px rgba(16, 124, 65, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(8px);
+        }
+
+        .wa-bubble::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent 0%, rgba(34, 197, 94, 0.35) 50%, transparent 100%);
+            transition: left 0.6s ease;
+        }
+
+        .wa-bubble:hover {
+            transform: scale(1.1) translateY(-2px);
+            border-color: #22c55e;
+            background: #107c41;
+            box-shadow: 0 12px 24px rgba(34, 197, 94, 0.5), 0 0 15px rgba(34, 197, 94, 0.2);
+        }
+
+        .wa-bubble:hover::after {
+            left: 130%;
+        }
+
+        .wa-bubble svg {
+            fill: #ffffff;
+            width: 25px;
+            height: 25px;
+            display: block;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+        }
+
+        .wa-popup {
+            background: #0d0f11;
+            border: 1px solid rgba(16, 124, 65, 0.25);
+            border-radius: 12px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(16, 124, 65, 0.05);
+            margin-bottom: 15px;
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .wa-popup.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .wa-popup h4 {
+            font-size: 0.95rem;
+            color: #fcf6ba;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .wa-popup p {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 12px;
+        }
+
+        .wa-popup input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.03);
+            color: #ffffff;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            outline: none;
+        }
+
+        .wa-popup input:focus {
+            border-color: #107c41;
+        }
+
+        .wa-btn-submit {
+            width: 100%;
+            background: #128c7e;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .wa-btn-submit:hover {
+            background: #075e54;
+        }
+
+        /* 10. PIE DE PÁGINA */
+        footer {
+            text-align: center;
+            padding: 50px 20px 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(5, 6, 7, 0.6);
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .footer-tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--gold-soft);
+            letter-spacing: 0.5px;
+            margin-bottom: 18px;
+        }
+
+        .footer-trust {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 0.7rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            color: #94a3b8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #22c55e;
+        }
+
+        .footer-copy {
+            margin-top: 18px;
+            font-size: 0.7rem;
+            color: #3f4a5a;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. ADVERTENCIA SANITARIA INICIAL -->
+    <div class="age-gate" id="ageGate">
+        <div class="age-gate-content">
+            <div class="badge-18">18</div>
+            <h2>Acceso Restringido</h2>
+            <p>Debes confirmar que eres mayor de edad para ingresar. El acceso de menores está estrictamente prohibido.</p>
+            
+            <div class="health-warning">
+                ⚠️ ADVERTENCIA: Los vaporizadores contienen nicotina, la cual es altamente adictiva. El exceso en este producto es perjudicial para la salud.
+            </div>
+
+            <div class="age-buttons">
+                <button class="age-btn btn-yes" onclick="verifyAge(true)">Sí, soy mayor</button>
+                <button class="age-btn btn-no" onclick="verifyAge(false)">No, salir</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1B. PANTALLA DE BIENVENIDA -->
+    <section class="hero-welcome" id="heroWelcome">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <img src="delux blanco png_3.png" alt="Delux Puff" class="hero-logo">
+            <div class="hero-divider"></div>
+            <p class="hero-location">Bucaramanga, Colombia</p>
+            <h1 class="hero-title">Perfumería 1:1 &amp; Vapes de Alta Gama</h1>
+            <p class="hero-subtitle">Manejamos las mejores marcas del mercado a los mejores precios, con la exclusividad y calidad que tu experiencia merece.</p>
+            <p class="hero-trust">+4 años de trayectoria en el mercado</p>
+            <button class="hero-scroll-btn" onclick="goToCatalog()" aria-label="Ver catálogo">
+                <span>Descubre el catálogo</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+                    <path d="M6 9l6 6 6-6"></path>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- 2. NAVBAR CON AMBOS LOGOS -->
+    <nav class="navbar" id="mainNav">
+        <button class="menu-toggle" onclick="toggleSidebar()">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            Menú
+        </button>
+        
+        <!-- Contenedor alineado con ambos logos en el encabezado general -->
+        <div class="brand-logos-header">
+            <div class="logo-slot">
+                <img src="delux blanco png_3.png" alt="Delux Puff Logo" class="logo-delux">
+            </div>
+            <div class="header-divider"></div>
+            <div class="logo-slot">
+                <img src="royal lite_2.png" alt="Royal Essence Logo" class="logo-royal">
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. MENÚ LATERAL (SIDEBAR) -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+    <div class="sidebar" id="sidebar">
+        <button class="sidebar-close" onclick="toggleSidebar()" aria-label="Cerrar menú">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <ul class="sidebar-menu">
+            <li class="sidebar-item"><a class="sidebar-link active" onclick="switchSection('vapes')">Delux Puff (Vapes)</a></li>
+            
+            <!-- ELEMENTO CON MENÚ DESPLEGABLE DINÁMICO (ROYAL ESSENCE) -->
+            <li class="sidebar-item sidebar-item-dropdown">
+                <a class="sidebar-link" onclick="switchSection('perfumes')">Royal Essence (Perfumería)</a>
+                <ul class="sidebar-dropdown">
+                    <li class="sidebar-sub-item"><a class="sidebar-sub-link" onclick="switchCategory('perfumes', 'caballero')">Caballero</a></li>
+                    <li class="sidebar-sub-item"><a class="sidebar-sub-link" onclick="switchCategory('perfumes', 'dama')">Dama</a></li>
+                    <li class="sidebar-sub-item"><a class="sidebar-sub-link" onclick="switchCategory('perfumes', 'arabe')">Perfumería Árabe</a></li>
+                    
+                    <!-- Sub-desplegable de Kits -->
+                    <li class="sidebar-sub-item sub-dropdown-item">
+                        <a class="sidebar-sub-link" onclick="switchCategory('perfumes', 'kits')">Kits ▾</a>
+                        <ul class="sub-dropdown">
+                            <li><a class="sidebar-nested-link" onclick="switchCategory('perfumes', 'kits-caballero')">Kits Caballero</a></li>
+                            <li><a class="sidebar-nested-link" onclick="switchCategory('perfumes', 'kits-dama')">Kits Dama</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="sidebar-item"><a class="sidebar-link" onclick="switchSection('combos')">Combos Especiales</a></li>
+            <li class="sidebar-item"><a class="sidebar-link" onclick="switchSection('ofertas')">Precios de Promoción</a></li>
+        </ul>
+    </div>
+
+    <!-- 4. CABECERA DINÁMICA DE SECCIONES (Cambia logo según sección) -->
+    <header id="header-section" class="section-header active">
+        <img id="dynamic-section-logo" class="section-logo-img" src="delux blanco png_3.png" alt="Logo Sección">
+        <div class="section-title-group">
+            <span class="section-kicker">Colección Exclusiva</span>
+            <h1 id="section-main-title">Delux Puff</h1>
+            <p id="section-sub-title">Dispositivos & Vapes Premium</p>
+        </div>
+    </header>
+
+
+    <!-- 5. SECCIÓN VAPES (DELUX PUFF) -->
+    <main id="container-vapes" class="container active">
+        <div class="filter-bar" id="vapesFilterBar">
+            <button class="filter-btn active" data-filter="default" onclick="applyVapesFilter('default')">All</button>
+            <button class="filter-btn" data-filter="bestsellers" onclick="applyVapesFilter('bestsellers')">Best Sellers</button>
+            <button class="filter-btn" data-filter="price-asc" onclick="applyVapesFilter('price-asc')">Price: Low to High</button>
+            <button class="filter-btn" data-filter="price-desc" onclick="applyVapesFilter('price-desc')">Price: High to Low</button>
+        </div>
+        <div class="grid" id="grid-vapes"></div>
+    </main>
+
+    <!-- 6. SECCIÓN PERFUMERÍA (ROYAL ESSENCE) -->
+    <main id="container-perfumes" class="container">
+        <div class="grid" id="grid-perfumes"></div>
+    </main>
+
+    <!-- 7. SECCIÓN COMBOS ESPECIALES -->
+    <main id="container-combos" class="container">
+        <div class="combo-grid">
+            
+            <!-- COMBO 1: Chillax Go X Kit -->
+            <div class="combo-card">
+                <div class="combo-img-container" onclick="openLightbox('combo_chillax.png')">
+                    <img src="combo_chillax.png" alt="Chillax Go X Kit Combo" loading="lazy" decoding="async" onerror="this.style.display='none';">
+                    <div class="combo-info-tag">Incluye 1 batería y 4 pods intercambiables</div>
+                </div>
+                <div class="combo-info-content">
+                    <h3 class="combo-title">CHILLAX GO X KIT</h3>
+                    <p class="combo-desc">Incluye una batería y los 4 pods de diferente sabor para que nunca te aburras.</p>
+                    <div class="combo-meta">
+                        <span class="combo-label">Precio combo</span>
+                        <span class="combo-price-val">$100.000</span>
+                    </div>
+                    <div class="combo-promo-badge">PROMO: 2 x $190.000</div>
+                    <button class="combo-btn" onclick="openWAPromo('CHILLAX GO X KIT')">ORDENAR COMBO</button>
+                </div>
+            </div>
+
+            <!-- COMBO 2: Yogurcito Potenciador -->
+            <div class="combo-card">
+                <div class="combo-img-container" onclick="openLightbox('combo_yogurcito.png')">
+                    <img src="combo_yogurcito.png" alt="Yogurcito Potenciador" loading="lazy" decoding="async" onerror="this.style.display='none';">
+                    <div class="combo-info-tag">Recomendado por Blessd y Westcol</div>
+                </div>
+                <div class="combo-info-content">
+                    <h3 class="combo-title">YOGURCITO POTENCIADOR</h3>
+                    <p class="combo-desc">Yogurcito potenciador sexual recomendado por Blessd y Westcol.</p>
+                    <div class="combo-meta">
+                        <span class="combo-label">Precio combo</span>
+                        <span class="combo-price-val">$28.000</span>
+                    </div>
+                    <div class="combo-promo-badge">PROMO: 2 x $54.000</div>
+                    <button class="combo-btn" onclick="openWAPromo('YOGURCITO POTENCIADOR')">ORDENAR COMBO</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 8. SECCIÓN PRECIOS DE PROMOCIÓN -->
+    <main id="container-ofertas" class="container">
+        <div class="promo-container">
+            <div class="promo-subtitle">LLEVANDO 2 UNIDADES DE VAPES</div>
+            <h2 class="promo-title-table">Lista Completa de Precios Promocionales</h2>
+            
+            <table class="promo-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Puffs</th>
+                        <th>Individual</th>
+                        <th style="text-align: right; color: #22c55e;">PROMO (2 UNIDADES)</th>
+                    </tr>
+                </thead>
+                <tbody id="promo-table-body">
+                    <!-- Las filas se renderizan de forma dinámica desde JS -->
+                </tbody>
+            </table>
+
+            <button class="promo-btn-order" onclick="openWAPromo('Pedido Promoción Vapes 2x')">HACER PEDIDO DE PROMO 2X</button>
+        </div>
+    </main>
+
+    <!-- 8B. LIGHTBOX PARA VER IMAGEN COMPLETA -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Cerrar imagen ampliada">&times;</button>
+        <img id="lightbox-img" class="lightbox-content" src="" alt="Imagen ampliada">
+    </div>
+
+    <!-- 9. BURBUJA DE WHATSAPP FLOTANTE (ESTILO LIQUID EMERALD) -->
+    <!-- 9A. BOTÓN FLOTANTE "VOLVER ARRIBA" -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Volver arriba">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5"></path>
+            <path d="M5 12l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <div class="wa-wrapper">
+        <div class="wa-popup" id="waPopup">
+            <h4 id="waPopupTitle">¡Hola! Te damos la bienvenida</h4>
+            <p id="waPopupText">¿Nos indicas tu nombre y dirección para darte una atención personalizada?</p>
+            <input type="text" id="waClientName" placeholder="Nombre completo" required />
+            <input type="text" id="waClientAddress" placeholder="Dirección de entrega" required />
+            <button class="wa-btn-submit" onclick="sendWhatsAppMessage()">Iniciar Conversación</button>
+        </div>
+        <div class="wa-bubble" onclick="toggleWhatsAppPopup()" role="button" tabindex="0" aria-label="Abrir chat de WhatsApp" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleWhatsAppPopup();}">
+            <svg viewBox="0 0 24 24" width="24" height="24" preserveAspectRatio="xMidYMid meet">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.863-9.843.002-2.63-1.013-5.102-2.859-6.95C16.63 1.962 14.162.95 11.54.947c-5.438 0-9.864 4.412-9.867 9.84-.001 1.73.473 3.418 1.373 4.898L2.008 22l6.196-1.625l-.426-.221-.131-.2zM17.487 14.39c-.322-.162-1.912-.944-2.208-1.052-.297-.108-.513-.162-.73.162-.216.324-.836 1.052-1.025 1.268-.19.215-.378.243-.7.081-.323-.162-1.364-.503-2.596-1.602-.958-.855-1.605-1.912-1.793-2.237-.19-.323-.02-.5-.181-.661-.146-.145-.323-.378-.485-.567-.162-.189-.216-.324-.324-.54-.108-.216-.054-.405-.027-.567.027-.162.216-.513.324-.675.108-.162.144-.27.216-.405.072-.135.036-.253-.018-.364-.054-.11-.513-1.236-.704-1.696-.185-.444-.37-.383-.513-.39-.131-.006-.282-.007-.433-.007-.152 0-.399.057-.608.284-.209.227-.798.78-.798 1.902 0 1.122.817 2.204.931 2.357.114.153 1.61 2.46 3.902 3.45.545.235.97.375 1.303.481.549.175 1.047.15 1.442.09.44-.067 1.353-.553 1.542-1.087.19-.533.19-1.013.133-1.108-.056-.095-.208-.152-.53-.314z"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- 10. FOOTER -->
+    <footer>
+        <p class="footer-tagline">"Excelencia en cada experiencia"</p>
+        <div class="footer-trust">
+            <span>Calidad Garantizada</span>
+            <span>Envíos a Todo el País</span>
+            <span>Atención Personalizada</span>
+        </div>
+        <a href="https://instagram.com/deluxpuff" target="_blank" rel="noopener noreferrer" class="footer-link">@deluxpuff en Instagram</a>
+        <p class="footer-copy">© <span id="footer-year"></span> Delux & Royal · Catálogo Exclusivo · Uso exclusivo para mayores de edad</p>
+    </footer>
+
+    <!-- LÓGICA E INVENTARIO -->
+    <script>
+        // 1. CONTROL ADVERTENCIA EDAD
+        function verifyAge(isAdult) {
+            if (isAdult) {
+                const gate = document.getElementById('ageGate');
+                gate.style.opacity = '0';
+                setTimeout(() => gate.style.display = 'none', 500);
+            } else {
+                window.location.href = "https://www.google.com";
+            }
+        }
+
+        // 1B. TRANSICIÓN DE LA PANTALLA DE BIENVENIDA AL DESLIZAR
+        function goToCatalog() {
+            document.getElementById('mainNav').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        (function () {
+            const hero = document.getElementById('heroWelcome');
+            if (!hero) return;
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(() => {
+                    const heroHeight = hero.offsetHeight || 1;
+                    const progress = Math.min(window.scrollY / heroHeight, 1);
+                    hero.style.opacity = String(1 - progress);
+                    hero.style.transform = `translateY(${progress * 50}px)`;
+                    ticking = false;
+                });
+            }, { passive: true });
+        })();
+
+        // 1C. BOTÓN "VOLVER ARRIBA"
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        (function () {
+            const backToTop = document.getElementById('backToTop');
+            if (!backToTop) return;
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(() => {
+                    backToTop.classList.toggle('show', window.scrollY > window.innerHeight * 0.6);
+                    ticking = false;
+                });
+            }, { passive: true });
+        })();
+
+        // 1D. AÑO DINÁMICO EN EL FOOTER (evita tener que actualizarlo a mano cada año)
+        (function () {
+            const footerYear = document.getElementById('footer-year');
+            if (footerYear) footerYear.textContent = new Date().getFullYear();
+        })();
+
+        // 2. SIDEBAR
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
+        }
+
+        // 3. LIGHTBOX (VISUALIZACIÓN FLOTANTE DE IMÁGENES)
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.add('show');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('show');
+        }
+
+        // Previene que al hacer clic en la imagen ampliada se cierre el lightbox accidentalmente
+        document.getElementById('lightbox-img').addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+
+        // 4. WHATSAPP POPUP
+        let pendingProduct = null;
+        let justOpenedWAPopup = false;
+
+        function toggleWhatsAppPopup() {
+            const popup = document.getElementById('waPopup');
+            popup.classList.toggle('show');
+            if (popup.classList.contains('show')) {
+                justOpenedWAPopup = true;
+            }
+        }
+
+        // Cierra el cuestionario de WhatsApp automáticamente al tocar fuera de él
+        document.addEventListener('click', function (e) {
+            const popup = document.getElementById('waPopup');
+            const wrapper = document.querySelector('.wa-wrapper');
+
+            // Si el popup se acaba de abrir en este mismo clic (p. ej. desde "Consultar Disponibilidad"),
+            // ignoramos este clic para no cerrarlo apenas se abre.
+            if (justOpenedWAPopup) {
+                justOpenedWAPopup = false;
+                return;
+            }
+
+            if (popup.classList.contains('show') && wrapper && !wrapper.contains(e.target)) {
+                popup.classList.remove('show');
+            }
+        });
+
+        function getSavedClientData() {
+            return {
+                name: localStorage.getItem('dr_client_name') || '',
+                address: localStorage.getItem('dr_client_address') || ''
+            };
+        }
+
+        function buildWAMessage(name, address, productName) {
+            let msg = `Hola, mi nombre es ${name}`;
+            if (address) msg += ` y mi dirección de entrega es ${address}`;
+            if (productName) {
+                msg += `. Estoy interesado/a en: ${productName}. ¿Podrían darme más detalles?`;
+            } else {
+                msg += `. Me gustaría recibir asesoría sobre el catálogo.`;
+            }
+            return msg;
+        }
+
+        function sendWhatsAppMessage() {
+            const nameInput = document.getElementById('waClientName').value.trim();
+            const addressInput = document.getElementById('waClientAddress').value.trim();
+
+            if (nameInput === "") {
+                alert("Por favor, ingresa tu nombre para una mejor atención.");
+                return;
+            }
+
+            localStorage.setItem('dr_client_name', nameInput);
+            localStorage.setItem('dr_client_address', addressInput);
+
+            const baseUrl = "https://wa.me/573102057185";
+            const text = encodeURIComponent(buildWAMessage(nameInput, addressInput, pendingProduct));
+            window.open(`${baseUrl}?text=${text}`, '_blank', 'noopener,noreferrer');
+
+            pendingProduct = null;
+            toggleWhatsAppPopup();
+        }
+
+        function openWAPromo(promoName) {
+            const saved = getSavedClientData();
+
+            if (saved.name) {
+                const baseUrl = "https://wa.me/573102057185";
+                const text = encodeURIComponent(buildWAMessage(saved.name, saved.address, promoName));
+                window.open(`${baseUrl}?text=${text}`, '_blank', 'noopener,noreferrer');
+                return;
+            }
+
+            pendingProduct = promoName;
+            const title = document.getElementById('waPopupTitle');
+            const text = document.getElementById('waPopupText');
+            title.textContent = "¡Un paso más!";
+            text.textContent = `Déjanos tu nombre y dirección para continuar tu pedido de "${promoName}".`;
+
+            const popup = document.getElementById('waPopup');
+            if (!popup.classList.contains('show')) {
+                popup.classList.add('show');
+            }
+            justOpenedWAPopup = true;
+            document.getElementById('waClientName').focus();
+        }
+
+        // 5. CAMBIADOR DE SECCIONES DINÁMICO
+        function switchSection(section) {
+            // Cerramos el sidebar para facilitar la navegación fluida
+            toggleSidebar();
+
+            document.querySelectorAll('.sidebar-link').forEach(link => link.classList.remove('active'));
+            document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
+
+            const title = document.getElementById('section-main-title');
+            const subtitle = document.getElementById('section-sub-title');
+            const dynamicLogo = document.getElementById('dynamic-section-logo');
+
+            document.getElementById(`container-${section}`).classList.add('active');
+            
+            // Buscamos el link correspondiente (manejando que uno contiene la clase dropdown)
+            const matchedLink = document.querySelector(`.sidebar-link[onclick*="switchSection('${section}')"]`);
+            if (matchedLink) matchedLink.classList.add('active');
+
+            if (section === 'vapes') {
+                document.body.classList.remove('royal-mode');
+                title.textContent = "Delux Puff";
+                subtitle.textContent = "Dispositivos & Vapes Premium";
+                dynamicLogo.src = "delux blanco png_3.png";
+                dynamicLogo.alt = "Delux Puff Logo";
+                applyVapesFilter(currentVapesFilter);
+            } else if (section === 'perfumes') {
+                document.body.classList.add('royal-mode');
+                title.textContent = "Royal Essence";
+                subtitle.textContent = "Perfumería de Lujo";
+                dynamicLogo.src = "royal lite_2.png";
+                dynamicLogo.alt = "Royal Essence Logo";
+                renderGrid(perfumes, 'grid-perfumes');
+            } else if (section === 'combos') {
+                document.body.classList.remove('royal-mode');
+                title.textContent = "Kits & Combos";
+                subtitle.textContent = "Combinaciones Especiales";
+                dynamicLogo.src = "delux blanco png_3.png";
+                dynamicLogo.alt = "Delux Puff Logo";
+            } else if (section === 'ofertas') {
+                document.body.classList.remove('royal-mode');
+                title.textContent = "Promociones Exclusivas";
+                subtitle.textContent = "Descuentos Reales por Cantidad";
+                dynamicLogo.src = "delux blanco png_3.png";
+                dynamicLogo.alt = "Delux Puff Logo";
+            }
+        }
+
+        // CAMBIADOR DE SUB-CATEGORÍAS DE PERFUMERÍA
+        function switchCategory(section, category) {
+            toggleSidebar();
+            
+            document.querySelectorAll('.sidebar-link').forEach(link => link.classList.remove('active'));
+            document.querySelectorAll('.container').forEach(c => c.classList.remove('active'));
+
+            const title = document.getElementById('section-main-title');
+            const subtitle = document.getElementById('section-sub-title');
+            const dynamicLogo = document.getElementById('dynamic-section-logo');
+
+            document.getElementById(`container-${section}`).classList.add('active');
+            
+            // Mantener activo el link principal de Perfumería
+            const matchedLink = document.querySelector(`.sidebar-link[onclick*="switchSection('perfumes')"]`);
+            if (matchedLink) matchedLink.classList.add('active');
+
+            document.body.classList.add('royal-mode');
+            title.textContent = "Royal Essence";
+            dynamicLogo.src = "royal lite_2.png";
+            dynamicLogo.alt = "Royal Essence Logo";
+
+            // Filtrado dinámico según la categoría elegida
+            let filteredPerfumes = [];
+            if (category === 'caballero') {
+                subtitle.textContent = "Perfumes Exclusivos - Caballero";
+                filteredPerfumes = perfumes.filter(p => p.tag === 'caballero');
+            } else if (category === 'dama') {
+                subtitle.textContent = "Fragancias Exclusivas - Dama";
+                filteredPerfumes = perfumes.filter(p => p.tag === 'dama');
+            } else if (category === 'arabe') {
+                subtitle.textContent = "Perfumería Árabe Exótica";
+                filteredPerfumes = perfumes.filter(p => p.tag === 'arabe');
+            } else if (category === 'kits') {
+                subtitle.textContent = "Kits Exclusivos de Regalo";
+                filteredPerfumes = perfumes.filter(p => p.tag && p.tag.startsWith('kits'));
+            } else if (category === 'kits-caballero') {
+                subtitle.textContent = "Kits de Lujo para Caballero";
+                filteredPerfumes = perfumes.filter(p => p.tag === 'kits-caballero');
+            } else if (category === 'kits-dama') {
+                subtitle.textContent = "Kits Elegantes para Dama";
+                filteredPerfumes = perfumes.filter(p => p.tag === 'kits-dama');
+            }
+
+            renderGrid(filteredPerfumes, 'grid-perfumes');
+        }
+
+        // 5. BASES DE DATOS DE PRODUCTOS (PRECIOS SINCRONIZADOS)
+        const vapes = [
+            { id: "mtrx-12k", nombre: "MTRX", puffs: "12.000 PUFFS", imagen: "mtrx_blueberry_watermelon.jpeg", detalles: "15ml prefilled, Mesh Coil, Batería 650mAh, Carga Rápida USB-C", precio: "$33.000" },
+            { id: "snowwolf-8k", nombre: "Snowwolf Ease", puffs: "8.000 PUFFS", imagen: "snowwolf_ease_8k00.jpeg", detalles: "18ml E-liquid, Boquilla tipo pitillo, Batería 650mAh, 11W Potencia", precio: "$23.000" },
+            { id: "airfuze-30k", nombre: "Airfuze Smartwatch", puffs: "30.000 PUFFS", imagen: "airfuze_smartwatch.jpeg", detalles: "Pantalla TFT de 2.01\", Conexión Bluetooth, Modos Soft/Regular/Boost", precio: "$56.000" },
+            { id: "pyne-pod-20k", nombre: "Pyne Pod Boost Pro", puffs: "20.000 PUFFS", imagen: "pyne_pod_boost_pro.jpeg", detalles: "Modo Turbo, Pantalla digital de porcentaje, Luces rítmicas de fiesta", precio: "$42.000", bestseller: true },
+            { id: "bang-leader-32k", nombre: "Bang Leader", puffs: "32.000 PUFFS", imagen: "bang_leader_32k.png", detalles: "Doble tanque de 28ml x 2 (Sabor intercambiable), Dual Mesh Coil", precio: "$54.000", bestseller: true },
+            { id: "extra-bar-40k", nombre: "Geek Extra Bar", puffs: "40.000 PUFFS", imagen: "extra_bar_40k_neon.png", detalles: "Pantalla digital dual, Sabor intercambiable, Batería recargable", precio: "$62.000", bestseller: true },
+            { id: "spherex-40k", nombre: "SphereX", puffs: "40.000 PUFFS", imagen: "spherex_40k_astronauta.png", detalles: "Pantalla digital de 360 grados, Modo Turbo, Indicadores LED de esencia y batería", precio: "$62.000", bestseller: true },
+            { id: "nicky-jam-15k", nombre: "Nicky Jam", puffs: "15.000 PUFFS", imagen: "nicky_jam_fume_15k.png", detalles: "Colaboración exclusiva, Control de flujo de aire, Pantalla digital con indicador de power", precio: "$37.000" },
+            { id: "chillax-shake-15k", nombre: "Chillax Shake", puffs: "15.000 PUFFS", imagen: "chillax_shake_15k.png", detalles: "Pantalla digital dinámica, Esencia premium de sabor intenso, Puerto de carga tipo C", precio: "$39.000" },
+            { id: "snoopy-extra-tank-15k", nombre: "Snoopy Extra Tank", puffs: "15.000 PUFFS", imagen: "snoopy_extra_tank_15k.png", detalles: "Diseño innovador de doble tanque de esencia, Mayor duración, Carga rápida tipo C", precio: "$37.000" },
+
+            // --- NUEVOS INGRESOS ---
+            { id: "death-row-5k", nombre: "Death Row", puffs: "5.000 PUFFS", imagen: "death_row_5k.png", detalles: "Diseño compacto edición especial, Mesh Coil, Sabor intenso desde el primer golpe", precio: "$20.000" },
+            { id: "lost-mary-os5000-5k", nombre: "Lost Mary OS5000", puffs: "5.000 PUFFS", imagen: "lost_mary_os5000_5k.png", detalles: "Batería integrada de larga duración, Mesh Coil, Acabado premium metálico", precio: "$25.000", bestseller: true },
+            { id: "lost-mary-mo5000-5k", nombre: "Lost Mary MO5000", puffs: "5.000 PUFFS", imagen: "lost_mary_mo5000_5k.png", detalles: "Batería de larga duración, Mesh Coil, Diseño compacto edición MO5000", precio: "$25.000" },
+            { id: "lost-vape-5-5k", nombre: "Lost Vape", puffs: "5.500 PUFFS", imagen: "lost_vape_5_5k.png", detalles: "Carcasa ergonómica antideslizante, Mesh Coil, Encendido automático", precio: "$25.000" },
+            { id: "hunk-8k", nombre: "Hulk Hogan's", puffs: "8.000 PUFFS", imagen: "hunk_8k.png", detalles: "Diseño robusto de gran autonomía, Batería 500mAh, Boquilla ergonómica", precio: "$26.000" },
+            { id: "ijoy-10k", nombre: "IJOY", puffs: "10.000 PUFFS", imagen: "ijoy_10k.png", detalles: "Doble malla de vaporización, Batería recargable tipo C, Indicador LED de carga", precio: "$28.000" },
+            { id: "ijoy-sd-10k", nombre: "IJOY SD", puffs: "10.000 PUFFS", imagen: "ijoy_sd_10k.png", detalles: "Doble malla de vaporización, Batería recargable tipo C, Acabado edición SD", precio: "$28.000" },
+            { id: "rabbeats-10k", nombre: "RabBeats", puffs: "10.000 PUFFS", imagen: "rabbeats_10k.png", detalles: "Diseño con luces rítmicas, Mesh Coil, Batería recargable de alto rendimiento", precio: "$29.000" },
+            { id: "beyond-clk8000-12k", nombre: "Beyond CLK8000", puffs: "12.000 PUFFS", imagen: "beyond_clk8000_12k.png", detalles: "Pantalla digital de porcentaje, Mesh Coil dual, Carga rápida tipo C", precio: "$32.000" },
+            { id: "chris-brown-15k", nombre: "Chris Brown", puffs: "15.000 PUFFS", imagen: "chris_brown_15k.png", detalles: "Colaboración exclusiva de edición limitada, Pantalla digital, Sabor intenso y parejo", precio: "$35.000" },
+            { id: "beco-15k", nombre: "BECO", puffs: "15.000 PUFFS", imagen: "beco_15k.png", detalles: "Acabado de lujo con detalles metálicos, Mesh Coil, Batería de larga duración", precio: "$35.000" },
+            { id: "vera-22k", nombre: "Vera", puffs: "22.000 PUFFS", imagen: "vera_22k.png", detalles: "Gran autonomía de uso, Pantalla digital de batería y esencia, Doble Mesh Coil", precio: "$41.000" },
+            { id: "spaceman-25k", nombre: "Spaceman", puffs: "25.000 PUFFS", imagen: "spaceman_25k.png", detalles: "Diseño futurista con luces LED, Modo Turbo, Pantalla digital de alta resolución", precio: "$47.000" },
+            { id: "vint-50k", nombre: "Vint", puffs: "50.000 PUFFS", imagen: "vint_50k.png", detalles: "Máximo rendimiento, tecnología avanzada de doble Mesh Coil, sabor constante e increíble flujo de aire", precio: "$68.000" }
+        ];
+
+        // SECTOR PERFUMERÍA CATEGORIZADO
+        const perfumes = [
+            // --- NUEVOS PERFUMES CABALLERO (Añadidos de forma dinámica) ---
+            { id: "perf-cab-212-vip", nombre: "212 VIP Men", puffs: "CABALLERO", tag: "caballero", imagen: "212_vip_men.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-212-nyc", nombre: "212 Men NYC", puffs: "CABALLERO", tag: "caballero", imagen: "212_men_nyc.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-212-aqua", nombre: "212 Men Aqua", puffs: "CABALLERO", tag: "caballero", imagen: "212_men_aqua.png", detalles: "Ocasión recomendada: Deporte/Vacaciones.", precio: "$65.000" },
+            { id: "perf-cab-212-metal", nombre: "212 Men Metálica", puffs: "CABALLERO", tag: "caballero", imagen: "212_men_metalica.png", detalles: "Ocasión recomendada: Diario.", precio: "$70.000" },
+            { id: "perf-cab-212-sexy", nombre: "212 Men Sexy", puffs: "CABALLERO", tag: "caballero", imagen: "212_men_sexy.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-212-heroes", nombre: "212 Men Heroes Forever Young", puffs: "CABALLERO", tag: "caballero", imagen: "212_men_heroes.png", detalles: "Ocasión recomendada: Diario.", precio: "$70.000" },
+            { id: "perf-cab-bad-boy", nombre: "Bad Boy", puffs: "CABALLERO", tag: "caballero", imagen: "bad_boy.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-ch-men", nombre: "CH Men", puffs: "CABALLERO", tag: "caballero", imagen: "ch_men.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-1m-trad", nombre: "One Million Tradicional", puffs: "CABALLERO", tag: "caballero", imagen: "one_million_tradicional.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-1m-lucky", nombre: "One Million Lucky", puffs: "CABALLERO", tag: "caballero", imagen: "one_million_lucky.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-1m-elixir", nombre: "One Million Elixir", puffs: "CABALLERO", tag: "caballero", imagen: "one_million_elixir.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-1m-gold", nombre: "One Million Gold", puffs: "CABALLERO", tag: "caballero", imagen: "one_million_gold.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-1m-parfum", nombre: "One Million Parfum", puffs: "CABALLERO", tag: "caballero", imagen: "one_million_parfum.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-black-xs-trad", nombre: "Black XS Tradicional", puffs: "CABALLERO", tag: "caballero", imagen: "black_xs_tradicional.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-black-xs-lexces", nombre: "Black XS L’Excès", puffs: "CABALLERO", tag: "caballero", imagen: "black_xs_lexces.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-pure-xs", nombre: "Pure XS Men", puffs: "CABALLERO", tag: "caballero", imagen: "pure_xs_men.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-acqua-di-gio", nombre: "Acqua di Giò Men", puffs: "CABALLERO", tag: "caballero", imagen: "acqua_di_gio_men.png", detalles: "Ocasión recomendada: Diario.", precio: "$60.000" },
+            { id: "perf-cab-acqua-profondo", nombre: "Acqua di Giò Profondo", puffs: "CABALLERO", tag: "caballero", imagen: "acqua_di_gio_profondo.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-the-one", nombre: "The One Men", puffs: "CABALLERO", tag: "caballero", imagen: "the_one_men.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-phantom-trad", nombre: "Phantom Tradicional", puffs: "CABALLERO", tag: "caballero", imagen: "phantom_tradicional.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-phantom-parfum", nombre: "Phantom Parfum", puffs: "CABALLERO", tag: "caballero", imagen: "phantom_parfum.png", detalles: "Ocasión recomendada: Noche.", precio: "$70.000" },
+            { id: "perf-cab-phantom-elixir", nombre: "Phantom Elixir", puffs: "CABALLERO", tag: "caballero", imagen: "phantom_elixir.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-invictus-trad", nombre: "Invictus Tradicional", puffs: "CABALLERO", tag: "caballero", imagen: "invictus_tradicional.png", detalles: "Ocasión recomendada: Diario.", precio: "$60.000" },
+            { id: "perf-cab-invictus-parfum", nombre: "Invictus Parfum", puffs: "CABALLERO", tag: "caballero", imagen: "invictus_parfum.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-invictus-legend", nombre: "Invictus Legend", puffs: "CABALLERO", tag: "caballero", imagen: "invictus_legend.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-invictus-victory", nombre: "Invictus Victory Elixir", puffs: "CABALLERO", tag: "caballero", imagen: "invictus_victory_elixir.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-stallion-53", nombre: "Stallion 53", puffs: "CABALLERO", tag: "caballero", imagen: "stallion_53.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-santal-33", nombre: "Santal 33", puffs: "CABALLERO", tag: "caballero", imagen: "santal_33.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-le-male-parfum", nombre: "Le Male Le Parfum", puffs: "CABALLERO", tag: "caballero", imagen: "le_male_le_parfum.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-le-male-elixir", nombre: "Le Male Elixir", puffs: "CABALLERO", tag: "caballero", imagen: "le_male_elixir.png", detalles: "Ocasión recomendada: Noche.", precio: "$95.000" },
+            { id: "perf-cab-scandal", nombre: "Scandal Men", puffs: "CABALLERO", tag: "caballero", imagen: "scandal_men.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-nautica", nombre: "Nautica Voyage", puffs: "CABALLERO", tag: "caballero", imagen: "nautica_voyage.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-360-gris", nombre: "360 Men Gris", puffs: "CABALLERO", tag: "caballero", imagen: "360_men_gris.png", detalles: "Ocasión recomendada: Diario.", precio: "$60.000" },
+            { id: "perf-cab-360-red", nombre: "360 Men Red", puffs: "CABALLERO", tag: "caballero", imagen: "360_men_red.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-dylan-blue", nombre: "Dylan Blue Men", puffs: "CABALLERO", tag: "caballero", imagen: "dylan_blue_men.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-eau-fraiche", nombre: "Eau Fraiche Men", puffs: "CABALLERO", tag: "caballero", imagen: "eau_fraiche_men.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-polo-blue", nombre: "Polo Blue Men", puffs: "CABALLERO", tag: "caballero", imagen: "polo_blue_men.png", detalles: "Ocasión recomendada: Noche.", precio: "$60.000" },
+            { id: "perf-cab-polo-red", nombre: "Polo Red Men", puffs: "CABALLERO", tag: "caballero", imagen: "polo_red_men.png", detalles: "Ocasión recomendada: Noche.", precio: "$60.000" },
+            { id: "perf-cab-hb-scent-abs", nombre: "Hugo Boss The Scent Absolut", puffs: "CABALLERO", tag: "caballero", imagen: "hugo_boss_the_scent_absolut.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-hb-bottled", nombre: "Hugo Boss Bottled", puffs: "CABALLERO", tag: "caballero", imagen: "hugo_boss_bottled.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-hb-night", nombre: "Hugo Boss Night", puffs: "CABALLERO", tag: "caballero", imagen: "hugo_boss_night.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-hb-man", nombre: "Hugo Boss Man", puffs: "CABALLERO", tag: "caballero", imagen: "hugo_boss_man.png", detalles: "Ocasión recomendada: Noche.", precio: "$60.000" },
+            { id: "perf-cab-creed-ave", nombre: "Creed Aventus", puffs: "CABALLERO", tag: "caballero", imagen: "creed_aventus.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-creed-silver", nombre: "Creed Silver Mountain", puffs: "CABALLERO", tag: "caballero", imagen: "creed_silver_mountain.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-montblanc", nombre: "Mont Blanc Parfum", puffs: "CABALLERO", tag: "caballero", imagen: "mont_blanc_parfum.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-starwalker", nombre: "Starwalker", puffs: "CABALLERO", tag: "caballero", imagen: "starwalker.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-swiss-men", nombre: "Swiss Army Men", puffs: "CABALLERO", tag: "caballero", imagen: "swiss_army_men.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-swiss-red", nombre: "Swiss Army Red", puffs: "CABALLERO", tag: "caballero", imagen: "swiss_army_red.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-versace-eros", nombre: "Versace Eros Tradicional", puffs: "CABALLERO", tag: "caballero", imagen: "versace_eros_tradicional.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-versace-flame", nombre: "Versace Eros Flame", puffs: "CABALLERO", tag: "caballero", imagen: "versace_eros_flame.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-versace-energy", nombre: "Versace Eros Energy", puffs: "CABALLERO", tag: "caballero", imagen: "versace_eros_energy.png", detalles: "Ocasión recomendada: Diario.", precio: "$65.000" },
+            { id: "perf-cab-stronger", nombre: "Stronger With You Intensely", puffs: "CABALLERO", tag: "caballero", imagen: "stronger_with_you_intensely.png", detalles: "Ocasión recomendada: Noche.", precio: "$65.000" },
+            { id: "perf-cab-layton", nombre: "Layton Men", puffs: "CABALLERO", tag: "caballero", imagen: "layton_men.png", detalles: "Ocasión recomendada: Noche.", precio: "$90.000" },
+            { id: "perf-cab-asad-trad", nombre: "Asad Tradicional", puffs: "CABALLERO", tag: "caballero", imagen: "asad_tradicional.png", detalles: "Ocasión recomendada: Noche.", precio: "$95.000" },
+            { id: "perf-cab-asad-elixir", nombre: "Asad Elixir", puffs: "CABALLERO", tag: "caballero", imagen: "asad_elixir.png", detalles: "Ocasión recomendada: Diario.", precio: "$95.000" },
+            { id: "perf-cab-asad-bourbon", nombre: "Asad Bourbon", puffs: "CABALLERO", tag: "caballero", imagen: "asad_bourbon.png", detalles: "Ocasión recomendada: Diario.", precio: "$95.000" },
+            { id: "perf-cab-asad-zanzibar", nombre: "Asad Zanzibar", puffs: "CABALLERO", tag: "caballero", imagen: "asad_zanzibar.png", detalles: "Ocasión recomendada: Noche.", precio: "$95.000" },
+
+            // Dama
+            { id: "perfume-dam-1", nombre: "Royal Essence Rose", puffs: "DAMA", tag: "dama", imagen: "royal_rose.png", detalles: "Una explosión de frescura floral con notas dulces de durazno y almizcle blanco seductor." },
+            
+            // Árabe
+            { id: "perfume-ara-1", nombre: "Club de Nuit Intense", puffs: "ÁRABE", tag: "arabe", imagen: "club_nuit.png", detalles: "Excelente proyección de gran demanda. Un aroma amaderado especiado sumamente adictivo." },
+
+            // Kits Caballero
+            { id: "kit-cab-1", nombre: "Kit Signature King", puffs: "KIT CABALLERO", tag: "kits-caballero", imagen: "kit_king.png", detalles: "Elegante estuche que incluye perfume Premium, gel de ducha y minitalla de viaje." },
+
+            // Kits Dama
+            { id: "kit-dam-1", nombre: "Kit Floral Seduction", puffs: "KIT DAMA", tag: "kits-dama", imagen: "kit_floral.png", detalles: "Espectacular set con loción hidratante, crema perfumada y esencia concentrada floral." }
+        ];
+
+        // BASE DE DATOS ACTUALIZADA CON TUS NUEVOS PRECIOS
+        const ofertasData = [
+            { producto: "Death Row", puffs: "5K", individual: "$20.000", promo: "$36.000" },
+            { producto: "Lost Mary OS5000", puffs: "5K", individual: "$25.000", promo: "$46.000" },
+            { producto: "Lost Mary MO5000", puffs: "5K", individual: "$25.000", promo: "$46.000" },
+            { producto: "Lost Vape", puffs: "5.5K", individual: "$25.000", promo: "$46.000" },
+            { producto: "Ease Granizado", puffs: "8K", individual: "$23.000", promo: "$42.000" },
+            { producto: "Hulk Hogan's", puffs: "8K", individual: "$26.000", promo: "$48.000" },
+            { producto: "IJOY", puffs: "10K", individual: "$28.000", promo: "$52.000" },
+            { producto: "IJOY SD", puffs: "10K", individual: "$28.000", promo: "$52.000" },
+            { producto: "RabBeats", puffs: "10K", individual: "$29.000", promo: "$54.000" },
+            { producto: "Beyond CLK8000", puffs: "12K", individual: "$32.000", promo: "$60.000" },
+            { producto: "MTRX", puffs: "12K", individual: "$33.000", promo: "$62.000" },
+            { producto: "Nicky Jam", puffs: "15K", individual: "$37.000", promo: "$68.000" },
+            { producto: "BECO", puffs: "15K", individual: "$35.000", promo: "$66.000" },
+            { producto: "Chris Brown", puffs: "15K", individual: "$35.000", promo: "$66.000" },
+            { producto: "Chillax Shake", puffs: "15K", individual: "$39.000", promo: "$72.000" },
+            { producto: "Snoopy Extra Tank", puffs: "15K", individual: "$37.000", promo: "$70.000" },
+            { producto: "PynePod", puffs: "20K", individual: "$42.000", promo: "$78.000" },
+            { producto: "Vera", puffs: "22K", individual: "$41.000", promo: "$78.000" },
+            { producto: "Spaceman", puffs: "25K", individual: "$47.000", promo: "$90.000" },
+            { producto: "Airfuze Smartwatch", puffs: "30K", individual: "$56.000", promo: "$106.000" },
+            { producto: "Bang Leader", puffs: "32K", individual: "$54.000", promo: "$104.000" },
+            { producto: "Geek Extra Bar", puffs: "40K", individual: "$62.000", promo: "$118.000" },
+            { producto: "SphereX", puffs: "40K", individual: "$62.000", promo: "$118.000" },
+            { producto: "Vint", puffs: "50K", individual: "$68.000", promo: "$130.000" }
+        ];
+
+        // 6. RENDERIZADORES
+
+        // Identifica la casa/marca de cada fragancia para poder diferenciarlas visualmente
+        const BRAND_RULES = [
+            ["212", "Carolina Herrera"],
+            ["Bad Boy", "Carolina Herrera"],
+            ["CH Men", "Carolina Herrera"],
+            ["One Million", "Paco Rabanne"],
+            ["Black XS", "Paco Rabanne"],
+            ["Pure XS", "Paco Rabanne"],
+            ["Phantom", "Paco Rabanne"],
+            ["Invictus", "Paco Rabanne"],
+            ["Acqua di Gi", "Giorgio Armani"],
+            ["The One", "Dolce & Gabbana"],
+            ["Stallion", "Armaf"],
+            ["Club de Nuit", "Armaf"],
+            ["Santal 33", "Le Labo"],
+            ["Le Male", "Jean Paul Gaultier"],
+            ["Scandal", "Jean Paul Gaultier"],
+            ["Nautica", "Nautica"],
+            ["360 Men", "Perry Ellis"],
+            ["Dylan Blue", "Versace"],
+            ["Eau Fraiche", "Versace"],
+            ["Versace Eros", "Versace"],
+            ["Polo Blue", "Ralph Lauren"],
+            ["Polo Red", "Ralph Lauren"],
+            ["Hugo Boss", "Hugo Boss"],
+            ["Creed", "Creed"],
+            ["Mont Blanc", "Montblanc"],
+            ["Starwalker", "Montblanc"],
+            ["Swiss Army", "Victorinox Swiss Army"],
+            ["Stronger With You", "Emporio Armani"],
+            ["Layton", "Parfums de Marly"],
+            ["Asad", "Lattafa"],
+            ["Royal Essence", "Royal Essence"],
+            ["Kit", "Royal Essence"]
+        ];
+
+        // Paleta discreta de acentos de lujo; cada marca recibe siempre el mismo color
+        const BRAND_ACCENTS = ["#8a6d3f", "#2f2f2f", "#7a1f2b", "#1f3d3a", "#3a3a5c", "#9c7a2e", "#4a4238"];
+
+        function getBrand(nombre) {
+            const match = BRAND_RULES.find(([keyword]) => nombre.includes(keyword));
+            return match ? match[1] : "Royal Essence";
+        }
+
+        function getBrandAccent(brand) {
+            let hash = 0;
+            for (let i = 0; i < brand.length; i++) {
+                hash = (hash * 31 + brand.charCodeAt(i)) >>> 0;
+            }
+            return BRAND_ACCENTS[hash % BRAND_ACCENTS.length];
+        }
+
+        function renderGrid(data, gridId) {
+            const grid = document.getElementById(gridId);
+            grid.innerHTML = '';
+            const isPerfumeGrid = gridId === 'grid-perfumes';
+
+            if (data.length === 0) {
+                grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: #64748b; font-size: 0.95rem; margin-top: 40px;">No hay productos disponibles para esta categoría en este momento.</p>`;
+                return;
+            }
+
+            data.forEach(prod => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                let brandKickerHtml = '';
+                if (isPerfumeGrid) {
+                    const brand = getBrand(prod.nombre);
+                    const accent = getBrandAccent(brand);
+                    card.style.setProperty('--brand-accent', accent);
+                    brandKickerHtml = `<span class="brand-kicker">${brand}</span>`;
+                }
+
+                const bestsellerTagHtml = prod.bestseller ? `<span class="bestseller-tag">★ Best Seller</span>` : '';
+
+                card.innerHTML = `
+                    <div class="badge">${prod.puffs}</div>
+                    <div class="image-wrapper" onclick="openLightbox('${prod.imagen}')">
+                        <img src="${prod.imagen}" alt="${prod.nombre}" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="img-placeholder" style="display:none;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <circle cx="8.5" cy="8.5" r="1.5" />
+                                <path d="M21 15l-5-5L5 21" />
+                            </svg>
+                            <span style="margin-top:8px; font-size:0.7rem;">Guardar imagen como:<br><b>${prod.imagen}</b></span>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        ${brandKickerHtml}
+                        ${bestsellerTagHtml}
+                        <h3 class="product-name">${prod.nombre}</h3>
+                        <p class="product-details">${prod.detalles}</p>
+                        ${prod.precio ? `
+                        <div class="product-price-row">
+                            <span class="product-price-label">Precio</span>
+                            <span class="product-price-value">${prod.precio}</span>
+                        </div>` : ''}
+                        <a class="btn-catalog" onclick="openWAPromo('${prod.nombre}')">Consultar Disponibilidad</a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // 5C. FILTRO DE ORDEN: BEST SELLERS / PRECIO ASCENDENTE / PRECIO DESCENDENTE
+        let currentVapesFilter = 'default';
+
+        function parsePrecio(precioStr) {
+            return parseInt((precioStr || '').replace(/[^0-9]/g, ''), 10) || 0;
+        }
+
+        function applyVapesFilter(filterType) {
+            currentVapesFilter = filterType;
+
+            document.querySelectorAll('#vapesFilterBar .filter-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.filter === filterType);
+            });
+
+            let list = [...vapes];
+
+            if (filterType === 'bestsellers') {
+                list = list.filter(p => p.bestseller);
+            } else if (filterType === 'price-asc') {
+                list.sort((a, b) => parsePrecio(a.precio) - parsePrecio(b.precio));
+            } else if (filterType === 'price-desc') {
+                list.sort((a, b) => parsePrecio(b.precio) - parsePrecio(a.precio));
+            }
+
+            renderGrid(list, 'grid-vapes');
+        }
+
+        function renderPromoTable() {
+            const tableBody = document.getElementById('promo-table-body');
+            tableBody.innerHTML = '';
+            
+            ofertasData.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td style="font-weight: 600;">${row.producto}</td>
+                    <td style="color: #64748b; font-weight: 500;">${row.puffs}</td>
+                    <td class="promo-price-strike">${row.individual}</td>
+                    <td class="promo-price-active" style="text-align: right;">${row.promo}</td>
+                `;
+                tableBody.appendChild(tr);
+            });
+        }
+
+        applyVapesFilter('default');
+        renderGrid(perfumes, 'grid-perfumes');
+        renderPromoTable();
+    </script>
+</body>
+</html>
